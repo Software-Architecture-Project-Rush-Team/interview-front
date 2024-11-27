@@ -20,18 +20,22 @@ import {
 </script>
 
 <template>
-  <Card class="w-[100px] space-y-1" style="width: 350px; height: 200px;">
+  <Card class="w-[100px] space-y-1" style="width: 350px; height: 250px;">
     <CardHeader>
       <CardTitle class="text-center">你好！面试官</CardTitle>
       <!-- <CardDescription>请选择</CardDescription> -->
     </CardHeader>
-    <CardFoot class="flex flex-col space-y-2 items-center">
+    <CardContent>
       <form>
-          <div>
-          <Input style="width: 107%;" id="name" placeholder="请输入面试官提供的房间号" />
-          </div>
+        <div>
+          <Input id="name" placeholder="请输入提供的房间号" />
+        </div>
       </form>
-        <Button class="w-full">加入面试房间</Button>
+    </CardContent>
+    <CardFoot class="flex justify-between px-6 pb-6">
+        <Button class="w-full">创建房间</Button>
+        <Button class="w-full">加入房间</Button>
+
     </CardFoot>
   </Card>
 </template>
@@ -43,9 +47,15 @@ import {
 .justify-center {
   justify-content: center;
 }
+.justify-between {
+  justify-content: space-between;
+}
 .flex-col {
   flex-direction: column;
 }   
+.flex-row {
+  flex-direction: row;
+}
 .items-center {
   align-items: center;
 }
@@ -60,5 +70,12 @@ import {
 }
 .space-y-2 > * + * {
   margin-top: 1.5rem; /* 添加垂直间距 */
+}
+.px-6 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.pb-6 {
+  padding-bottom: 1.5rem;
 }
 </style>

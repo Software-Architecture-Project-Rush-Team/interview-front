@@ -5,10 +5,6 @@ import Toaster from '@/components/ui/toast/Toaster.vue'
 const isAuthenticated = ref(false)
 const router = useRouter()
 
-function login() {
-  isAuthenticated.value = true
-  router.push('/home')
-}
 </script>
 
 <template>
